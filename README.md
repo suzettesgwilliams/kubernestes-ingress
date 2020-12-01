@@ -101,12 +101,12 @@ metadata:
   name: ingress-resource-1
 spec:
   rules:
-  - host: <DomainNameOne>
+  - host: app.sgwilliams.com
     http:
       paths:
       # Default Backend (Root /)
       - backend:
-          serviceName: <serviceName>
+          serviceName: <springapp>
           servicePort: 80
 ``` 
 
@@ -118,17 +118,17 @@ metadata:
   name: ingress-resource-1
 spec:
   rules:
-  - host: <DomainNameOne>
+  - host: app.sgwilliams.com
     http:
       paths:
       - backend:
-          serviceName: <serviceNameOne>
-          servicePort: 80
+          serviceName: springapp
+          servicePort: 8
   - host: <DomainNameTwo>
     http:
       paths:
       - backend:
-          serviceName: <serviceNamTwo>
+          serviceName: javawebappservice
           servicePort: 80	
 ``` 		  
 
